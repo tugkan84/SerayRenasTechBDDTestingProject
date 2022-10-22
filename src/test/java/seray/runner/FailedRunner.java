@@ -1,4 +1,4 @@
-package com.serayt;
+package seray.runner;
 
 
 import io.cucumber.junit.Cucumber;

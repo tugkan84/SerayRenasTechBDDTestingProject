@@ -1,4 +1,4 @@
-package com.serayt;
+package seray.runner;
 
 
 import io.cucumber.junit.Cucumber;
@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources", // features>>> path from content  >>> content root
-        glue = "seray/StepsDefinitions", //step definitions                 >> source root
-        tags = "@TC04",
+        glue = "code/stepsDefinitions", //step definitions                 >> source root
+        tags = "@Smoke",
         dryRun = true,// without open browser >> true   | false opens browser
         plugin = {
                 "pretty",
@@ -20,8 +20,6 @@ import org.junit.runner.RunWith;
 
         }
 )
-
-
 public class TestRunner {
 
 }

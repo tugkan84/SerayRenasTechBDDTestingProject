@@ -28,6 +28,7 @@ Feature: Payment Gateway Functional Test
     Then The user wants to click on pay now button
     And The user wants to verify message as "Payment successfull!"
 
+    @Regression
   Scenario Outline: Verify the various quantity
     Given The user wants to go to Guru99Demo web page
     When The user wants to verify the header "Mother Elephant With Babies Soft Toy"
