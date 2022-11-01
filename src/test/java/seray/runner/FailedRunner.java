@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "@target/rerun.txt", // features>>> path from content  >>> content root
-        glue = "code/stepsDefinitions" , //step definitions                 >> source root
+        glue = "seray/StepsDefinitions" , //step definitions                 >> source root
 
         dryRun = false ,// without open browser >> true   | false opens browser
         plugin ={

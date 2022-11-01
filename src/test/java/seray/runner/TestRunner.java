@@ -1,6 +1,5 @@
 package seray.runner;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -9,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources", // features>>> path from content  >>> content root
         glue = "seray/StepsDefinitions", //step definitions                 >> source root
-        tags = "@Regression",
+        tags = "@Smoke",
         dryRun = false,// without open browser >> true   | false opens browser
         plugin = {
                 "pretty",
