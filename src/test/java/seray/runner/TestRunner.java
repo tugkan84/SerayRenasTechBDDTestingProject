@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources", // features>>> path from content  >>> content root
-        glue = "code/stepsDefinitions", //step definitions                 >> source root
-        tags = "@Smoke",
-        dryRun = true,// without open browser >> true   | false opens browser
+        glue = "seray/StepsDefinitions", //step definitions                 >> source root
+        tags = "@Regression",
+        dryRun = false,// without open browser >> true   | false opens browser
         plugin = {
                 "pretty",
                 "rerun:target/rerun.txt",

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import seray.Utils.BrowserUtils;
 
 public class Guru99PaymentSuccessfulPage extends BrowserUtils {
-    private static final Logger logger = Logger.getLogger(Lab01.class);
+    private static final Logger logger = Logger.getLogger(Guru99PaymentSuccessfulPage.class);
     @FindBy(xpath = "//h2[.='Payment successfull!']")
     private WebElement orderVerifyMessage;
 

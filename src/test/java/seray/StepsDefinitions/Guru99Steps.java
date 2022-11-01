@@ -14,7 +14,7 @@ import seray.Utils.Driver;
 import java.util.Map;
 
 public class Guru99Steps extends BrowserUtils {
-    private static final Logger logger = Logger.getLogger(Lab01.class);
+    private static final Logger logger = Logger.getLogger(Guru99Steps.class);
     Guru99HomePage guru99HomePage = new Guru99HomePage();
     Guru99PaymentPage guru99PaymentPage = new Guru99PaymentPage();
     Guru99PaymentSuccessfulPage guru99PaymentSuccessfulPage = new Guru99PaymentSuccessfulPage();

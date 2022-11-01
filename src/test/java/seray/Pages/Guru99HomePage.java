@@ -9,7 +9,7 @@ import seray.Utils.BrowserUtils;
 import seray.Utils.Driver;
 
 public class Guru99HomePage extends BrowserUtils {
-    private static final Logger logger = Logger.getLogger(Lab01.class);
+    private static final Logger logger = Logger.getLogger(Guru99HomePage.class);
 
     @FindBy(xpath = "//h2[.='Mother Elephant With Babies Soft Toy']")
     private WebElement ElephantToyHeader;
@@ -47,7 +47,6 @@ public class Guru99HomePage extends BrowserUtils {
             verifiedURL = true;
         }
         Assert.assertTrue(verifiedURL);
-        logger.error("The Url can not verified");
     }
 
     public void setQuantityDropdown(String name) {

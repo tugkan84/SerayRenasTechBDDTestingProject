@@ -10,11 +10,12 @@ Feature: Payment Gateway Functional Test
     Given The user wants to go to Guru99Demo web page
     Then The user wants to verify that the toy price is "Price: $20"
 
-    @TC03 @Smoke @Regression
+  @TC03 @Smoke @Regression
   Scenario: Verify the Url contain “payment-gateway”
     Given The user wants to go to Guru99Demo web page
-      Then The user wants to verify that Url contains "payment-gateway"
+    Then The user wants to verify that Url contains "payment-gateway"
 
+  @TC04 @Regression
   Scenario: Verify the the quantity as "5"
     Given The user wants to go to Guru99Demo web page
     When The user wants to buy elephant toys as "5"
@@ -27,6 +28,7 @@ Feature: Payment Gateway Functional Test
     Then The user wants to click on pay now button
     And The user wants to verify message as "Payment successfull!"
 
+    @Regression
   Scenario Outline: Verify the various quantity
     Given The user wants to go to Guru99Demo web page
     When The user wants to verify the header "Mother Elephant With Babies Soft Toy"
