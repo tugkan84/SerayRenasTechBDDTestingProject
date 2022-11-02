@@ -5,7 +5,7 @@ def slackChannelID = 'C0434JQ285S'
 pipeline {
   agent any
   tools {
-    maven 'Maven 3.3.9'
+    maven 'Maven 4.0.0'
     jdk 'jdk8'
   }
   triggers{
