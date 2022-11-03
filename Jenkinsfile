@@ -16,26 +16,8 @@ pipeline
         {
             steps 
             {
-                echo 'Test App'
+                sh './mvnw clean test'
             }
         }
-
-        stage('Deploy') 
-        {
-            steps 
-            {
-                echo 'Deploy App'
-            }
-        }
-    }
-
-    post
-    {
-
-    	always
-    	{
-    		emailext body: 'Summary', subject: 'Pipeline Status', to: 'seraytugcu@gmail.com'
-    	}
-
     }
 }
