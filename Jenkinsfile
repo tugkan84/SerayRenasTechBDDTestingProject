@@ -1,39 +1,41 @@
-def buildStatus    = "FAILED"
-def slackColor     = "warning"
-def slackChannelID = 'C0434JQ285S'
+pipeline 
+{
+    agent any
 
-pipeline {
-  agent any
-  tools {
-    maven 'Maven 4.0.0'
-    jdk 'jdk8'
-  }
-  triggers{
-    cron 'H 2,16 * * *'
-  }
-  stages {
-    stage('Run Tests') {
-      steps {
-        sh 'mvn clean'
-        sh 'mvn test'
-      }
+    stages 
+    {
+        stage('Build') 
+        {
+            steps 
+            {
+                echo 'Build App'
+            }
+        }
+
+        stage('Test') 
+        {
+            steps 
+            {
+                echo 'Test App'
+            }
+        }
+
+        stage('Deploy') 
+        {
+            steps 
+            {
+                echo 'Deploy App'
+            }
+        }
     }
-  }
-  post{
-    always{
-      junit '**/surefire-reports/*.xml'
-      cucumber buildStatus: 'null', customCssFiles: '', customJsFiles: '', failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: 'target/cucumber.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
+
+    post
+    {
+
+    	always
+    	{
+    		emailext body: 'Summary', subject: 'Pipeline Status', to: 'seraytugcu@gmail.com'
+    	}
+
     }
-    success {
-      script {
-        buildStatus = "SUCCESS"
-        slackColor = "good"
-      }
-    }
-    cleanup {
-      script {
-        slackSend channel: slackChannelID, color: "${slackColor}", message: "*${buildStatus}*: `${env.JOB_NAME}` *#${env.BUILD_NUMBER}* \n<${env.BUILD_URL}/console|Console Log>"
-      }
-    }
-  }
 }
